@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <block name="promo.banner" template="TrainingUi_Components::promo-banner.phtml" before="-">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="promo-banner" xsi:type="array">        <!-- component -->
+                                <item name="component" xsi:type="string">TrainingUi_Components/js/promo-banner</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="message" xsi:type="string">It's working</item>
+                                    <item name="template" xsi:type="string">TrainingUi_Components/promo-banner-xml</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

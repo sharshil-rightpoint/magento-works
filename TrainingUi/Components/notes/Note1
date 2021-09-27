@@ -1,0 +1,54 @@
+<?php
+    /* @var $block Magento\Framework\View\Element\Template */
+?>
+<!-- this $block  will call for that particluar block which we defined in our xml file
+   this one:- <block name="promo.banner" template="TrainingUi_Components::promo-banner.phtml" before="-">
+-->
+<div id="promo-banner" class="promo-banner-block">
+    <p>Promo banner working</p>
+</div>
+
+
+<!-- type="text/x-magento-init" -->
+<!-- it's used to instantiate javascript component -->
+
+
+<script type="text/x-magento-init">
+{
+    '#promo-banner':{
+        "Magento_Ui/js/core/app" : <?= $block->getjsLayout() ?>
+    }
+}
+</script>
+<!-- "Magento_Ui/js/core/app" - this javascript file is responsible for initializing the javascript component -->
+<!-- //$block->getjsLayout() - this getjsLayout is defined in our layout xml file and this actully going to get all these values and convert it into json. 
+    
+    this value is converted in json
+    <block name="promo.banner" template="TrainingUi_Components::promo-banner.phtml" before="-">
+    <arguments>
+        <argument type="jsLayout" xsi:type="array">
+            <item name="components" xsi:type="array">
+                <item name="promo-banner" xsi:type="array">
+                    <item name="component" xsi:type="string">TrainingUi_Components/js/promo-banner<item>
+                </item>
+            </item>
+        </argument>
+    </arguments>
+</block>
+    if you want to check how it's converted in json check in pagesource in browser.
+
+
+    THis how it's look
+
+        {
+            "#promo-banner": {
+                "Magento_Ui/js/core/app" : {
+                    "components":{
+                        "promo-banner":{
+                            "component":"TrainingUi_Components\/js\/promo-banner"
+                        }
+                    }
+                }       
+            }
+        }
+-->

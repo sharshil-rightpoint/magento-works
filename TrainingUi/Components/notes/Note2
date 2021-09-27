@@ -1,0 +1,13 @@
+uiClass vs uiElement vs uiCollection vs uiComponent
+    Reference : https://devdocs.magento.com/guides/v2.4/ui_comp_guide/concepts/ui_comp_uiclass_concept.html#:~:text=The%20uiClass%20is%20a%20low,lib%2Fcore%2Fclass.js
+    
+ uiClass source code is module-ui/view/base/web/js/lib/core/class.js, in the Magento Open Source GitHub repository: app/code/Magento/Ui/view/base/web/js/lib/core/class.js
+
+ To get any ui component details you can run this in console
+ require('uiRegistry').get(componentName);
+ i.e
+ require('uiRegistry').get('promo-banner');
+ require('uiRegistry').get('promo-banner').message = "not working";
+
+
+if we want to overide the default properties we can do by xml.

@@ -1,0 +1,38 @@
+Step:1
+check cache status cmd-  bin/magento cache:status
+    result: 
+    Current status:
+                        config: 1
+                        layout: 1
+                    block_html: 1
+                   collections: 1
+                    reflection: 1
+                        db_ddl: 1
+               compiled_config: 1
+                           eav: 1
+         customer_notification: 1
+            config_integration: 1
+        config_integration_api: 1
+                     full_page: 1
+             config_webservice: 1
+                     translate: 1
+                        vertex: 1
+
+
+
+
+Step:2
+disabe cache 3 caches  - block_html, layout, full_page
+cmd:    bin/magento cache:disable block_html layout full_page
+Result
+Changed cache status:
+                        layout: 1 -> 0
+                    block_html: 1 -> 0
+                     full_page: 1 -> 0
+
+Step:3 
+Disable cache from browser
+window user: ctrl + shift + i
+mac user   : cmd  + shift + c
+go in network tab and select the checkbox disabel cache.
+

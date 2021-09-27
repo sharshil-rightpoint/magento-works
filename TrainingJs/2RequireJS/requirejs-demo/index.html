@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <!-- <script src="js/jquery.js"></script> -->
+    <script src="js/require.js"></script>
+    <body>
+        <h1>This is require js</h1>
+        <a href="https://requirejs.org/" target="_blank"> Require js</a>
+    </body>
+    <script>
+        // $(function(){
+        //     console.log("hi there");
+        // });
+
+        
+        require.config({       //This function accept a javascript object 
+            baseUrl: "js"       //Create baseurl property with "js"
+        });                     // This tells to requires js to look at our js folder and  get that js file.
+        requirejs(
+            ['jquery'], // [] it's an array of dependecy  i.e which library or which js you need have to define in this
+                        // jquery- this name directyl maps  to the require js
+            function($){  // () parameters of this function will be directy tied to that dependecies.  i.e $ --> jquery
+                $(function(){
+                    console.log('Hey There !');
+                });
+        });
+        
+
+       // Notes: This call back function which defined above was not executed until all that requirement ( ['jquery'], ) loaded first. 
+    </script>
+</html>

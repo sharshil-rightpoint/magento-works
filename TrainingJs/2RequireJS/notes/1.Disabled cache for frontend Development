@@ -1,0 +1,18 @@
+1. Go to folder in requirejs-demo  in this same module it self.
+That folder is just for example of requireJS,  there is no any relation with magento module.
+(go in that folder and open the index.html file in your browser)
+
+
+IF you want to check how magenot including the require js 
+
+vendor/magento/module-theme/view/frontend/layout/default.xml - go on line no 12.
+this file is loaded on every single page of magento.
+
+and you can check where that js is coming from 
+is  "root/lib/web/requirejs"
+
+2.Let's create our first requirejs-config.js  (config file)
+if you want to check how this requirejs-config.js is loading and configured 
+
+run this below command in magento root
+grep -R "requirejs-config.js" src/vendor/magento/

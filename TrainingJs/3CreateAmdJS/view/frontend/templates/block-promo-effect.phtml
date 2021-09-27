@@ -1,0 +1,32 @@
+
+<div class="block-promo-effect">
+    <h1>Owl Carousel</h1>
+    <div id="carousel"></div>
+</div>
+<!-- this is config object propery "message": "hi this is the message !"       -->
+<!-- Declarative notation -->
+<!-- reference : https://devdocs.magento.com/guides/v2.4/javascript-dev-guide/javascript/js_init.html -->
+<!-- 1st method -->
+<!-- data-mage-init = '{
+        "owlTest":{
+            "carouselData":{
+                "speed": "200",
+                "className": "working"
+            }      
+        }
+    }' -->
+
+<!-- 2nd method -->
+<script type="text/x-magento-init">
+    {
+        "#carousel":{
+            "owlTest":{
+                "carouselData":{
+                    "speed": "200",
+                    "className": "working finalyy"
+                }      
+            }
+        }
+    }
+</script>    
+

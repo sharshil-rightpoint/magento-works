@@ -1,0 +1,20 @@
+<?php
+/* @var $block Magento\Framework\Element\View\Template */
+?>
+<div id="promo-banner" class="promo-banner-block" data-bind="scope: 'promo-banner'">
+    <!-- <div data-bind=" template: getTemplate()"></div> -->
+    <!-- ko template: getTemplate()--><!-- /ko -->
+
+    <!-- getTemplate() is function of uiElement
+    to check vendor/magento/module-ui/view/base/web/js/lib/core/element/element.js line no 266
+    -->
+</div>
+
+
+<script type="text/x-magento-init">
+{
+    "#promo-banner": {
+        "Magento_Ui/js/core/app" : <?= $block->getJsLayout() ?>
+    }
+}
+</script>

@@ -1,0 +1,32 @@
+<?php
+/* @var $block Magento\Framework\Element\View\Template */
+?>
+<div id="promo-banner" class="promo-banner-block">
+    <p>Promo banner asdasd working</p>
+</div>
+
+
+<!-- type="text/x-magento-init" -->
+<!-- it's used to instantiate javascript component -->
+
+
+<script type="text/x-magento-init">
+{
+    "#promo-banner": {
+        "Magento_Ui/js/core/app" : <?= $block->getJsLayout() ?>
+    }
+}
+</script>
+<!-- check notes folder for this details-->
+<!-- aleternet way -->
+<!-- {
+    "#promo-banner": {
+        "Magento_Ui/js/core/app" : {
+            "components":{
+                "promo-banner" :{
+                    "component" : "TrainingUi_Components/js/promo-banner"
+                }
+            }
+        }
+    }
+} -->
