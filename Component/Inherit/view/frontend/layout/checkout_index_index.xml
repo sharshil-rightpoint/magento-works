@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <referenceBlock class="Magento\Checkout\Block\Onepage" name="checkout.root" template="Magento_Checkout::onepage.phtml" cacheable="false">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="checkout" xsi:type="array">
+                                <item name="children" xsi:type="array">
+                                    <item name="newComponent" xsi:type="array">
+                                        <item name="component" xsi:type="string">Component_Inherit/js/new-component</item>
+                                    </item>
+                                    <item name="customInherit" xsi:type="array">
+                                        <item name="component" xsi:type="string">Component_Inherit/js/inherit-component</item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </referenceBlock>
+        </referenceContainer>
+        <referenceContainer name="page.messages" remove="true"/>
+    </body>
+</page>
